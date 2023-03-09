@@ -1,9 +1,12 @@
-import {generateLoginForm, generateLogoutForm, getTime} from "./userForm.js";
+import {generateLoginForm, generateLogoutForm, getTime} from "./script/userForm";
 const userList = document.getElementById("userList");
 const saveUserBtn = document.getElementById("saveUserBtn");
 const newUser = document.getElementById("newUser");
 const newUserPassword = document.getElementById("newUserPassword");
 let loggedInUser = localStorage.getItem("username");
+
+let publishedBaseUrl = "https://crypto-js-login-qq2wj.ondigitalocean.app/"
+// let localBaseUrl = "http://localhost:3000/"
 
 getTime();
 
@@ -17,7 +20,7 @@ const init = () => {
 }
 init();
 
-fetch("http://localhost:3000/users/")
+fetch(`${publishedBaseUrl}users`)
 .then(res => res.json())
 .then(data => {
     printUsers(data);
@@ -58,7 +61,7 @@ saveUserBtn.addEventListener("click", () => {
 
    console.log(user);
 
-   fetch("http://localhost:3000/users", {
+   fetch(`${publishedBaseUrl}users`, {
     method: "POST",
     headers: {
         "Content-Type": "application/json",
