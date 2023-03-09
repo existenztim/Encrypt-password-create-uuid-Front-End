@@ -1,4 +1,4 @@
-import {generateLoginForm, generateLogoutForm, getTime} from "./script/userForm";
+import {generateLoginForm, generateLogoutForm, getTime} from './script/userForm.js';
 const userList = document.getElementById("userList");
 const saveUserBtn = document.getElementById("saveUserBtn");
 const newUser = document.getElementById("newUser");
