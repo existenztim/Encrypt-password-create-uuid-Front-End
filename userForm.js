@@ -1,4 +1,3 @@
-let userForm = document.getElementById("userForm");
 let loginForm = document.getElementById("loginForm");
 const greeting = document.getElementById("userGreeting");
 
@@ -39,7 +38,7 @@ export const generateLoginForm = () =>{
         <button id="loginUserBtn">Login</button>
         `;
 
-        loginUserBtn.addEventListener("click", () => {
+   loginUserBtn.addEventListener("click", () => {
     
             let loginUser = {
                 userName: loginUsername.value,
@@ -68,8 +67,9 @@ export const generateLoginForm = () =>{
                     `;
                     localStorage.setItem("username", data.userName);
                     generateLogoutForm(); 
-                } else {
-                    greeting.innerText = "failed to login, please check your username or password";
+                } 
+                else {
+                    greeting.innerText = "failed to login, please check your username or password and try again";
                 }
             });
             
