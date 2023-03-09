@@ -1,6 +1,9 @@
 let loginForm = document.getElementById("loginForm");
 const greeting = document.getElementById("userGreeting");
 
+let publishedBaseUrl = "https://crypto-js-login-qq2wj.ondigitalocean.app/"
+// let localBaseUrl = "http://localhost:3000/"
+
 export const getTime = () => {
 
     const today = new Date();
@@ -45,7 +48,7 @@ export const generateLoginForm = () =>{
                 userPassword: loginPassword.value
             }
             console.log(loginUser);
-            fetch("http://localhost:3000/users/login", {
+            fetch(`${publishedBaseUrl}users/login`, {
                 method:"POST",
                 headers: {
                     "Content-Type": "application/json",
