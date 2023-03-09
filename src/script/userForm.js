@@ -36,8 +36,8 @@ export const generateLogoutForm = () =>{
 export const generateLoginForm = () =>{
         loginForm.innerHTML= /*html*/`
         <h2>Login here:</h2>
-        <input type="text" id="loginUsername" placeholder="Användarnamn" />
-        <input type="password" id="loginPassword" placeholder="Lösenord" />
+        <input type="text" id="loginUsername" placeholder="username" />
+        <input type="password" id="loginPassword" placeholder="password" />
         <button id="loginUserBtn">Login</button>
         `;
 
